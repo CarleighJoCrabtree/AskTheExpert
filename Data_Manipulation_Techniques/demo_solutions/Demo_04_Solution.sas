@@ -37,7 +37,7 @@
 /***********************************************************/
 
 data parks;
-	set pg2.np_monthlytraffic;
+	set pg2.np_monthlytraffic (obs=50);
 	where ParkName like '%NP';
 	drop ParkCode Region Location NPLocation NameLength ParkName Park2;
 /*       scan(colName, number of word to extract) */
